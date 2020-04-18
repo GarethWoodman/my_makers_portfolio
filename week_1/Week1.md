@@ -7,19 +7,32 @@ Weekly Goals
 4. Describe some basic OO principles like encapsulation, SRP
 
 Plans to achieve:
-1. Work through Boris Bike Challenge - working with a new pair every afternoon
-2. Attend meditation sessions everyday to calm mind and optomize productivity
-3. Research and implement Object Orientated princples and check with peers and mentors it's correct
-4. Look through the practicals and work on a program to debug
+1. Work through Boris Bike Challenge with a new pair every afternoon
+2. Attend workshops that are inline with goals
+3. Complete Weekend Challenge
+4. Work through the practicals
 
 Evidence:
 1. Test-drive a simple program using objects and methods
+Created a roman numeral converter/calculator, inputs several numbers and tests output
+https://github.com/GarethWoodman/my_portfolio/tree/master/week_1/roman_numeral_converter
+
 2. Pair using the driver-navigator style
-Boris-Bikes: https://github.com/GarethWoodman/boris_bikes
+Working with three wonderful pair partners to complete the challenges in "Boris Bike"
+https://github.com/GarethWoodman/my_portfolio/tree/master/week_1/boris_bikes_pairing
 
 3. Follow an effective debugging process
-Post examples of before and after bugged docs
+Followed and completed debugging exercise as provided in Workshop
+https://github.com/GarethWoodman/my_portfolio/tree/master/week_1/debugging_1
 
 4. Describe some basic OO principles like encapsulation, SRP
-Create 2 or 3 basic programs using these princples
+
+Explanation
+Encapsulation is defining instance variables by creating new objects and only being able to access them through their methods. This hides the data from the user and allows smooth maintenance and modular code. 
+
+SRP (Single Responsibility Purpose) - Is telling a class/object to have a single purpose. For example a Person object should only contain attributes related to person, if we were to add that Person’s email address that would break the rule, instead we define Email as a separate class/object and that now has its own single responsibility.
+
+Evidence
+https://github.com/GarethWoodman/airport_challenge
+
 
