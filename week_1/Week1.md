@@ -29,6 +29,8 @@ https://github.com/GarethWoodman/my_portfolio/tree/master/week_1/debugging_1
 #### Encapsulation is defining instance variables by creating new objects and only being able to access them through their methods. This hides the data from the user and allows smooth maintenance and modular code. 
 
 #### SRP (Single Responsibility Purpose) - Is telling a class/object to have a single purpose. For example a Person object should only contain attributes related to person, if we were to add that Person’s email address that would break the rule, instead we define Email as a separate class/object and that now has its own single responsibility.
+
+#### Completed the Airport Challenge - adhering to OO principles and using TDD
 https://github.com/GarethWoodman/airport_challenge
 
 
