@@ -1,11 +1,10 @@
 class Oystercard
   LIMIT = 90
   MINIMUM_BALANCE = 1
-  attr_reader :balance, :entry_station, :journeys
+  attr_reader :balance, :journeys, :journey
 
   def initialize(balance = 0)
     @balance = balance
-    @entry_station = nil
     @journeys = []
     @journey = Hash.new
   end
@@ -15,18 +14,15 @@ class Oystercard
   end
 
   def touch_in(station)
-    raise "Does not have the minimum amount" if @balance < MINIMUM_BALANCE
-    @entry_station = station
+    not_minimum if @balance < MINIMUM_BALANCE
     @journey["entry_station"] = station
   end
 
   def touch_out(station)
     if in_journey?
       deduct(MINIMUM_BALANCE)
-      @entry_station = nil
       @journey["exit_station"] = station
-      @journeys << @journey
-      @journey = Hash.new
+      add_journey
     end
   end
 
@@ -35,12 +31,20 @@ class Oystercard
     raise "Exceeds balance limit of #{LIMIT}"
   end
 
+  def not_minimum
+    raise "Does not have the minimum amount"
+  end
+
   def in_journey?
-    @entry_station != nil
+    @journey["entry_station"] != nil
   end
 
   def deduct(amount)
     @balance -= amount
   end
 
+  def add_journey
+    @journeys << @journey
+    @journey = Hash.new
+  end
 end

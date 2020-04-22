@@ -5,9 +5,7 @@ describe Oystercard do
   let(:entry_station) {double(:station, :name => "Camden")}
   let(:exit_station) {double(:station, :name => "Angel")}
 
-
-  context "need top up" do
-
+  context "tops up then checks if it" do
     before :each do
       subject.top_up(50)
     end
@@ -41,8 +39,6 @@ describe Oystercard do
       it "returns exceed limit error if top_up exceeds balance limit of #{limit}" do
         expect { subject.top_up(50) }.to raise_error("Exceeds balance limit of #{limit}")
       end
-
-
     end
 
     it "deducts specified amount of money from the card" do
@@ -62,14 +58,15 @@ describe Oystercard do
       end
     end
 
-    it "remebers station when touched in" do
+    it "remembers station when touched in" do
       subject.touch_in(entry_station)
-      expect(subject.entry_station.name).to eq("Camden")
+      entry_station = subject.journey["entry_station"]
+      expect(entry_station.name).to eq("Camden")
     end
 
     it "forgets station when touched out" do
       subject.touch_in(entry_station)
-      expect { subject.touch_out(exit_station) }.to change{subject.entry_station}.to(nil)
+      expect { subject.touch_out(exit_station) }.to change{subject.journey["entry_station"]}.to(nil)
     end
   end
 
