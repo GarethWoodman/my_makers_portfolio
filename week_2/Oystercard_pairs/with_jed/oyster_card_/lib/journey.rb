@@ -1,10 +1,9 @@
 class Journey
   MINIMUM_FARE  = 1
   PENALTY       = 6
-  attr_reader :journeys, :entry, :exit, :fare
+  attr_reader :entry, :exit, :fare
 
   def initialize
-    @journeys = []
     @entry = nil
     @exit = nil
     @fare = MINIMUM_FARE

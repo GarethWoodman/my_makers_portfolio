@@ -9,9 +9,9 @@ class JourneyLog
   end
 
   def start(station)
-    return false if @current_journey.in_journey?
-    @current_journey = Journey.new
+    already_tapped = @current_journey.in_journey?
     @current_journey.entry = station
+    return false if already_tapped
   end
 
   def finish(station)

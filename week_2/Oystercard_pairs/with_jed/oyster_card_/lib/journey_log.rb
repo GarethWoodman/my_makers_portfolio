@@ -25,10 +25,9 @@ class JourneyLog
   end
 
   def add_journey
-    entry_station = @current_journey.entry
-    exit_station = @current_journey.exit
-    if entry_station && exit_station
-      @journeys << {:entry_station => entry_station, :exit_station => exit_station}
+    if @current_journey.entry && @current_journey.exit
+      @journeys << {:entry_station => @current_journey.entry,
+                    :exit_station => @current_journey.exit }
       reset
     end
   end

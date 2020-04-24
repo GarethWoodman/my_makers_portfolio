@@ -10,4 +10,14 @@ class Message
   def has_minimum?(balance)
     fail "Balance too low" if balance.get < Fare::MINIMUM
   end
+
+  def has_penalty?(station)
+    station == false ? print("Penalty applied") : false
+  end
+
+  private
+  def print(message)
+    puts(message)
+    true
+  end
 end

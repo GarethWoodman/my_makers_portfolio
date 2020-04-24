@@ -20,11 +20,13 @@ class Oystercard
 
   def touch_in(station)
     @message.has_minimum?(@balance)
-    @balance.apply_penalty if @journey_log.start(station) == false
+    start_station = @journey_log.start(station)
+    @balance.apply_penalty if @message.has_penalty?(start_station)
   end
 
   def touch_out(station)
-    return @balance.apply_penalty if @journey_log.finish(station) == false
+    finish_station = @journey_log.finish(station)
+    return @balance.apply_penalty if @message.has_penalty?(finish_station)
     @balance.deduct(@journey_log.last_journey)
   end
 end
