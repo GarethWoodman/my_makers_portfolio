@@ -1,5 +1,7 @@
 class Journey
-  attr_accessor :entry, :exit, :fare
+  MINIMUM = 1
+  PENALTY = 6
+  attr_accessor :entry, :exit
 
   def initialize
     @entry = nil
@@ -8,6 +10,11 @@ class Journey
 
   def complete?
     @entry && @exit
+  end
+
+  def fare
+    return PENALTY unless complete?
+    MINIMUM + (entry.zone - exit.zone).abs
   end
 
   def in_journey?

@@ -8,36 +8,20 @@ describe Oystercard do
     let(:exit_station) {double :exit_station}
 
     it "oyster card has 0 as default value" do
-        expect(oystercard.balance.get).to eq(0)
+        expect(oystercard.balance).to eq(0)
     end
 
-    # it "oyster card loaded with 5 pounds" do
-    #     expect(oystercard.top_up(5)).to eq(5)
-    # end
-
     describe "#top_up" do
-
-       #it { is_expected.to respond_to(:top_up).with(1).argument }
-
        it "can top up the balance" do
-        expect{ subject.top_up 1 }.to change{ subject.balance.get }.by 1
+        expect{ subject.top_up 1 }.to change{ subject.balance }.by 1
        end
 
        it "raises an error if the maximun balance is exeeded" do
-         maximum_balance = Balance::MAXIMUM
+         maximum_balance = Oystercard::MAXIMUM
          oystercard.top_up(maximum_balance)
          expect{ subject.top_up 1 }.to raise_error "Maximum of #{maximum_balance} balance exceeded"
        end
     end
-
-  #   describe "#deduct" do
-
-  #     it { is_expected.to respond_to(:deduct).with(1).argument }
-
-  #     it "should be able to deduct from balance" do
-  #       expect { subject.deduct(5) }.to change{ subject.balance.get.get }.by(-5)
-  #     end
-  # end
 
   describe "#touch_in" do
 
@@ -51,7 +35,7 @@ describe Oystercard do
 
     it "deducts money from card once touch_out" do
       subject.touch_in(Station.new)
-      expect{subject.touch_out(Station.new)}.to change{subject.balance.get}.by(-Fare::MINIMUM)
+      expect{subject.touch_out(Station.new)}.to change{subject.balance}.by(-Journey::MINIMUM)
   end
 end
 
@@ -74,6 +58,11 @@ describe "journey" do
 
   it "A new card should have a empty list of journeys" do
     expect(subject.journey_log.journeys).to eq([])
+  end
+
+  it "expects to deduct 3 when touch in at Station A and touch out at Staion C" do
+    subject.touch_in(Station.new("A", 1))
+    expect { subject.touch_out(Station.new("C", 3)) }.to change{subject.balance}.by(-3)
   end
 end
 

@@ -12,11 +12,11 @@ describe Journey do
   PENALTY = 6
 
   it "gives penalty if trying to touch in more than once in same journey" do
-    expect{ @card.touch_in(Station.new) }.to change{@card.balance.get}.by(-PENALTY)
+    expect{ @card.touch_in(Station.new) }.to change{@card.balance}.by(-PENALTY)
   end
 
   it "gives penalty if trying to touch out more than once in same journey" do
     @card.touch_out(Station.new)
-    expect{ @card.touch_out(Station.new) }.to change{@card.balance.get}.by(-PENALTY)
+    expect{ @card.touch_out(Station.new) }.to change{@card.balance}.by(-PENALTY)
   end
 end
