@@ -1,0 +1,13 @@
+<style>
+  .battle { text-align: center }
+</style>
+
+
+<%= @game.current_turn.name %>'s turn
+
+<h1 class='battle'><%= @game.player_1.name %>: <%= @game.player_1.hitpoints %>HP vs. <%= @game.player_2.name %>: <%= @game.player_2.hitpoints %>HP</h1>
+
+
+<form action="/attack" method="post">
+  <input type="submit" value="Attack">
+</form>
