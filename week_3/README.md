@@ -24,8 +24,8 @@
 ### 3. Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
 #### Completed Practicals
 [clients](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/clients) \
-[servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers)
-[http_servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/http_servers) \
+[servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers) \
+[http_servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/http_servers)
 
 #### Basic HTTP Diagram
 ![Basic HTTP Diagram](https://github.com/GarethWoodman/my_portfolio/blob/master/week_3/http_diagram.png)
