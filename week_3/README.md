@@ -31,7 +31,7 @@ https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers
 
 #### HTTP - request/response 
 HTTP (Hyper Text Transfer Protocol) is the protocol for sending a request (from client to server) and getting a response (from server to client).
-The two most comment HTTP Methods are GET & POST. GET simply returns a page with HTML from a server. POST sends data to server. 
+The two most common HTTP Methods are GET & POST. GET simply returns a page with HTML from a server. POST sends data to server. 
 
 #### HTML
 HTML (Hyper Text Markup Language) is a markup language that is the bare structure of a webpage. Just like building a house, HTML is the scaffolding that holds everything together.  
