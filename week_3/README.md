@@ -29,6 +29,9 @@ https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/clients \
 https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/http_servers \
 https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers
 
+#### Basic HTTP Diagram
+![asic HTTP Diagram](https://github.com/GarethWoodman/my_portfolio/blob/master/week_3/http_diagram.png)
+
 #### HTTP - request/response 
 HTTP (Hyper Text Transfer Protocol) is the protocol for sending a request (from client to server) and getting a response (from server to client).
 The two most common HTTP Methods are GET & POST. GET simply returns a page with HTML from a server. POST sends data to server. 
