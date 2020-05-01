@@ -14,23 +14,21 @@
 
 ## Evidence:
 ### 1. Build a simple web app
-#### Created a birthday app that either prints 'Happy Birthday' or the remaining days left 
-https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/birthday_app
+#### [Created a birthday app that either prints 'Happy Birthday' or the remaining days left](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/birthday_app)
 
-#### Completed intro_to_the_web challenge
-https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/intro_to_the_web
+#### [Completed intro_to_the_web challenge](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/intro_to_the_web)
 
 ### 2. Follow an effective debugging process for web applications
 #### Attended workshop and completed practical with team
 
 ### 3. Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
 #### Completed Practicals
-https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/clients \
-https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/http_servers \
-https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers
+[clients](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/clients) \
+[servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/servers)
+[http_servers](https://github.com/GarethWoodman/my_portfolio/tree/master/week_3/http_servers) \
 
 #### Basic HTTP Diagram
-![asic HTTP Diagram](https://github.com/GarethWoodman/my_portfolio/blob/master/week_3/http_diagram.png)
+![Basic HTTP Diagram](https://github.com/GarethWoodman/my_portfolio/blob/master/week_3/http_diagram.png)
 
 #### HTTP - request/response 
 HTTP (Hyper Text Transfer Protocol) is the protocol for sending a request (from client to server) and getting a response (from server to client).
