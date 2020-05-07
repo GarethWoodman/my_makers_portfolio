@@ -1,0 +1,160 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/lib/bookmark.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          4,
+          4,
+          null,
+          0,
+          null,
+          4,
+          15,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          0,
+          null,
+          null,
+          5,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/spec/features/web_helpers.rb": {
+        "lines": [
+          1,
+          2,
+          null,
+          2,
+          2,
+          2,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/spec/bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/spec/features/add_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/spec/features/bookmark_view_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/with_zsofia/Bookmark-manager/spec/features/viewing_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1588695679
+  }
+}
