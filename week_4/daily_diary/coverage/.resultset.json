@@ -4,8 +4,68 @@
       "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/app.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/lib/diary.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          13,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          1,
+          18,
+          18,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/spec/setup_test_database.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          5,
+          null,
+          5,
+          null,
+          null,
+          5,
           null
         ]
       },
@@ -49,30 +109,25 @@
           null
         ]
       },
-      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/lib/diary.rb": {
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/spec/features/add_diary_entries_spec.rb": {
         "lines": [
           1,
-          1,
           null,
           1,
-          4,
-          null,
-          null,
           1,
-          12,
-          null,
-          null,
           1,
-          4,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          2,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1588846410
+    "timestamp": 1588850277
   }
 }
