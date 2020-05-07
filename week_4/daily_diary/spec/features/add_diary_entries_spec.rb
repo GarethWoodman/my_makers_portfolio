@@ -8,7 +8,7 @@ feature "add entries" do
       click_button('Submit')
 
       #link = 'http:localhost:9292/entries/1'
-      expect(page).to have_content 'First entry'
+      expect(page).to have_link('First entry')
     end
   end
 end
