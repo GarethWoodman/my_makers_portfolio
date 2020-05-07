@@ -27,6 +27,11 @@ class Bookmark
                  url: result[0]['url'])
   end
 
+  def self.delete(id:)
+    connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
+  end
+
+  # Private Class methods ----------------
   def self.connection
     ENV['ENVIRONMENT'] == 'test' ? db = 'bookmark_manager_test' :
                                    db = 'bookmark_manager'
