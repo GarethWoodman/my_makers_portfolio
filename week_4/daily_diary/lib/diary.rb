@@ -12,4 +12,8 @@ class Diary
   def list_titles
     entries.map { |entry| entry[:title] }
   end
+
+  def get_entry_by(title:)
+    entries.each { |entry| return entry[:entry] if entry[:title] == title }
+  end
 end
