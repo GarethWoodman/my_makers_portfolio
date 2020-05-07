@@ -1,0 +1,44 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/app.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/spec/diary_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/garethwoodman/Desktop/Makers Academy/Projects/my_portfolio/week_4/daily_diary/lib/diary.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1588843829
+  }
+}
