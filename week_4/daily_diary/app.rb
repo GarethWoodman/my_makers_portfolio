@@ -18,4 +18,9 @@ class DailyDiary < Sinatra::Base
     @diary = Diary.entries
     erb :entries
   end
+
+  get '/entries/:id' do
+    @entry = Diary.find_entry_by(id: params[:id])
+    erb :show
+  end
 end
