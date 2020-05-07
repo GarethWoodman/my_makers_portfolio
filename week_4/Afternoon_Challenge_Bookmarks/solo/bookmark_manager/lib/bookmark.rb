@@ -31,6 +31,17 @@ class Bookmark
     connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
   end
 
+  def self.update(id:, url:, title:)
+    result = connection.exec("UPDATE bookmarks
+                              SET url = '#{url}', title = '#{title}'
+                              WHERE id = '#{id}'
+                              RETURNING id, title, url;")
+
+    Bookmark.new(id: result[0]['id'],
+                 title: result[0]['title'],
+                 url: result[0]['url'])
+  end
+
   # Private Class methods ----------------
   def self.connection
     ENV['ENVIRONMENT'] == 'test' ? db = 'bookmark_manager_test' :

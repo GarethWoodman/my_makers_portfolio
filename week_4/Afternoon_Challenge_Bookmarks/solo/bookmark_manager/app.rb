@@ -33,9 +33,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   patch '/bookmarks/:id' do
-    p "----- IN PATCH ROUTE -----"
-    p params
-    p "----- IN PATCH ROUTE -----"
+    Bookmark.update(id: params[:id], title: params[:title], url: params[:url])
     redirect '/bookmarks'
   end
 
