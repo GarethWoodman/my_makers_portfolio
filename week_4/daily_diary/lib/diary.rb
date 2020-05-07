@@ -5,16 +5,12 @@ class Diary
     connection.exec("INSERT INTO diary (title, entry) VALUES('#{title}', '#{entry}')")
   end
 
-  def self.list_titles
-    entries.map { |entry| entry['title'] }
-  end
-
-  def self.get_entry_by(title:)
-    entries.each { |entry| return entry['entry'] if entry['title'] == title }
-  end
-
   def self.entries
     connection.exec("SELECT * FROM diary")
+  end
+
+  def self.find_entry_by(id:)
+    entries.each { |entry| return entry['entry'] if entry['id'] == id }
   end
 
   private

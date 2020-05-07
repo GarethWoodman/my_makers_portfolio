@@ -22,15 +22,11 @@ describe Diary do
     end
   end
 
-  describe '#list_titles' do
-    it 'returns all entry titles' do
-      expect(Diary.list_titles).to eq titles
-    end
-  end
+  describe '#find_entry_by(id:)' do
+    let(:entry) { Diary.entries.first }
 
-  describe '#get_entry_by(title:)' do
-    it 'returns entry by title' do
-      expect(Diary.get_entry_by(title: titles[0])).to eq "Today is ok"
+    it 'returns entry by id' do
+      expect(Diary.find_entry_by(id: entry['id'])).to eq Diary.entries.first['entry']
     end
   end
 end
