@@ -5,7 +5,11 @@ class Diary
     @entries = Array.new
   end
 
-  def add(entry:)
-    @entries << entry
+  def add(entry:, title:)
+    @entries << { :entry => entry, :title => title }
+  end
+
+  def list_titles
+    entries.map { |entry| entry[:title] }
   end
 end
