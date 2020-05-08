@@ -1,4 +1,4 @@
-feature "add entries" do
+feature "find entries" do
 
   feature "adding a new diary entry" do
     scenario "A user can add an entry to their Daily Diary" do
@@ -7,7 +7,9 @@ feature "add entries" do
       fill_in('title', with: 'First entry')
       click_button('Submit')
 
-      expect(page).to have_link('First entry')
+      click_link('First entry')
+
+      expect(page).to have_content('The day it all started')
     end
   end
 end

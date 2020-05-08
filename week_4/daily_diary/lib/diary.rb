@@ -1,12 +1,12 @@
 require 'pg'
 
 class Diary
-  def self.add(title:, entry:)
-    Entry.create(title)
+  def self.add_entry(title:, entry:)
+    Entry.create(title, entry)
   end
 
-  def self.find_entry_by(id:)
-    entries.each { |entry| return entry['entry'] if entry['id'] == id }
+  def self.find_entry(id:)
+    entries.each { |entry| return entry if entry.id == id }
   end
 
   def self.entries
@@ -15,22 +15,23 @@ class Diary
 end
 
 class Entry
-  attr_reader: id, title, entry, url
+  attr_reader :id, :title, :entry, :url
 
   def initialize(id:, title:, entry:)
     @id     = id
     @entry  = entry
-    @title  = tile
+    @title  = title
     @url    = "http://localhost:9292/entries/#{id}"
   end
 
-  def self.create(url:, title:)
-    result = connection.exec("INSERT INTO diary (title, entry) VALUES('#{title}', '#{entry}') RETURNING id, title, url;")
-    Entry.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['entry'])
+  def self.create(title, entry)
+    result = connection.exec("INSERT INTO diary (title, entry) VALUES('#{title}', '#{entry}') RETURNING id, title, entry;")
+    Entry.new(id: result[0]['id'], title: result[0]['title'], entry: result[0]['entry'])
   end
 
   def self.all
-    entries.each { |entry| Entry.new(id: entry['id'], title: entry['title'], entry:['entry']) }
+    entries = connection.exec("SELECT * FROM diary")
+    entries.map { |entry| Entry.new(id: entry['id'], title: entry['title'], entry: entry['entry']) }
   end
 
   # Private Methods - - - - - - - - - - - - -
@@ -40,9 +41,5 @@ class Entry
     PG.connect(dbname: db)
   end
 
-  def self.entries
-    connection.exec("SELECT * FROM diary")
-  end
-
-  private_class_method :connection, :entries
+  private_class_method :connection
 end
