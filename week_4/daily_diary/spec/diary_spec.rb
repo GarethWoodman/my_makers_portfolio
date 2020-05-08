@@ -41,4 +41,10 @@ describe Diary do
       expect(first_entry.title).to eq "Still First entry"
     end
   end
+
+  describe '#delete' do
+    it 'deletes an entry' do
+      expect { Diary.entries.first.delete }.to change { Diary.entries.length }.by(-1)
+    end
+  end
 end
