@@ -12,9 +12,9 @@ describe Diary do
   end
   # ----------------------------------------------------------------
 
-  describe '#add_entry(title:, entry:)' do
+  describe '.add_entry(title:, entry:)' do
     it 'returns entry' do
-      expect(Diary.entries.first.entry).to eq "Today is ok"
+      expect(Diary.entries.first.content).to eq "Today is ok"
     end
 
     it 'returns title' do
@@ -22,12 +22,23 @@ describe Diary do
     end
   end
 
-  describe '#find_entry(id:)' do
+  describe '.find_entry(id:)' do
     let(:entry) { Diary.entries.first }
-    let(:entry_title) {entry.title}
 
     it 'returns entry by id' do
-      expect(Diary.find_entry(id: entry.id).title).to eq entry.title
+      expect(Diary.find_entry(id: entry.id).content).to eq entry.content
+    end
+  end
+
+  describe '#update(title:, entry:)' do
+    let(:first_entry) {Diary.entries.first}
+
+    before :each do
+      first_entry.update(title: "Still First entry", entry: "Today is AMAZING!")
+    end
+
+    it 'updates entry' do
+      expect(first_entry.title).to eq "Still First entry"
     end
   end
 end

@@ -1,12 +1,8 @@
 feature "find entries" do
 
-  feature "adding a new diary entry" do
-    scenario "A user can add an entry to their Daily Diary" do
-      visit('/entries/new')
-      fill_in('entry', with: 'The day it all started')
-      fill_in('title', with: 'First entry')
-      click_button('Submit')
-
+  feature "finding an entry by click on their title" do
+    scenario "A user can find an entry by clicking it's title" do
+      add_entry
       click_link('First entry')
 
       expect(page).to have_content('The day it all started')
