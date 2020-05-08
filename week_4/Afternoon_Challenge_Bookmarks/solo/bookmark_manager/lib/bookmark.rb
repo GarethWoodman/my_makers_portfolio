@@ -1,4 +1,5 @@
 require 'pg'
+require_relative 'database_connection'
 
 class Bookmark
   attr_reader :id, :title, :url
@@ -10,15 +11,12 @@ class Bookmark
   end
 
   def self.all
-    bookmarks.map do |bookmark|
-      Bookmark.new(id: bookmark['id'],
-                   title: bookmark['title'],
-                   url: bookmark['url'])
-    end
+    result = DatabaseConnection.query("SELECT * FROM bookmarks")
+    result.map { |bookmark| instance(bookmark)}
   end
 
   def self.create(url:, title:)
-    result = connection.exec("INSERT INTO bookmarks (url, title)
+    result = DatabaseConnection.query("INSERT INTO bookmarks (url, title)
                               VALUES('#{url}', '#{title}')
                               RETURNING id, title, url;")
 
@@ -28,11 +26,11 @@ class Bookmark
   end
 
   def self.delete(id:)
-    connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
+    DatabaseConnection.query("DELETE FROM bookmarks WHERE id = #{id}")
   end
 
   def self.update(id:, url:, title:)
-    result = connection.exec("UPDATE bookmarks
+    result = DatabaseConnection.query("UPDATE bookmarks
                               SET url = '#{url}', title = '#{title}'
                               WHERE id = '#{id}'
                               RETURNING id, title, url;")
@@ -43,22 +41,15 @@ class Bookmark
   end
 
   def self.find(id:)
-    result = connection.exec("SELECT * FROM bookmarks WHERE id = #{id};")
+    result = DatabaseConnection.query("SELECT * FROM bookmarks WHERE id = #{id};")
     Bookmark.new(id: result[0]['id'],
                  title: result[0]['title'],
                  url: result[0]['url'])
   end
 
-  # Private Class methods ----------------
-  def self.connection
-    ENV['ENVIRONMENT'] == 'test' ? db = 'bookmark_manager_test' :
-                                   db = 'bookmark_manager'
-    PG.connect :dbname => db
+  def self.instance(bookmark)
+    Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
   end
 
-  def self.bookmarks
-    connection.exec("SELECT * FROM bookmarks")
-  end
-
-  private_class_method :connection, :bookmarks
+  private_class_method :instance
 end
