@@ -6,4 +6,9 @@ class Thermostat
     @temperature = 20
     @power_save_mode = "off"
   end
+
+  def up
+    @temperature += 1
+  end
+
 end
