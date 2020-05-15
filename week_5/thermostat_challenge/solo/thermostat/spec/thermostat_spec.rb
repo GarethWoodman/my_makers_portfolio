@@ -21,7 +21,13 @@ describe Thermostat do
 
   context '#up' do
     it 'increases temperature by 1' do
-      expect { subject.up }.to change{ subject.temperature }.by 1
+      expect { subject.up }.to change { subject.temperature }.by 1
+    end
+  end
+
+  context '#down' do
+    it 'decreases temperature by 1' do
+      expect { subject.down }.to change { subject.temperature }.by -1
     end
   end
 end

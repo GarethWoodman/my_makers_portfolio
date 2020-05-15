@@ -11,4 +11,8 @@ class Thermostat
     @temperature += 1
   end
 
+  def down
+    @temperature -=1 
+  end
+
 end
