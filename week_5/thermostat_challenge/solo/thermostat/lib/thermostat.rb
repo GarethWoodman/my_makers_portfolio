@@ -1,5 +1,6 @@
 class Thermostat
-  attr_reader :temperature, :power_save_mode
+  attr_reader :temperature
+  attr_accessor :power_save_mode
 
   def initialize
     @temperature = 20
