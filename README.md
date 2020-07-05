@@ -9,8 +9,8 @@ A collection of projects worked on as outlined by the Makers course. Please navi
 * [Run, Boris Run! - Final Project](https://github.com/edmond-b/Covid_Game)
 
 ## Weekend Projects
-* [https://github.com/GarethWoodman/airport_challenge](Airport Challenge)
-* [https://github.com/GarethWoodman/takeaway-challenge](Takeaway Challenge)
-* [https://github.com/GarethWoodman/rps-challenge](Rock, Paper, Scissors Challenge)
-* [https://github.com/GarethWoodman/chitter-challenge](Chitter Challenge)
-* [https://github.com/GarethWoodman/bowling-challenge](Bowling Challenge)
+* [Airport Challenge](https://github.com/GarethWoodman/airport_challenge)
+* [Takeaway Challenge](https://github.com/GarethWoodman/takeaway-challenge)
+* [Rock, Paper, Scissors Challenge](https://github.com/GarethWoodman/rps-challenge)
+* [Chitter Challenge](https://github.com/GarethWoodman/chitter-challenge)
+* [Bowling Challenge](https://github.com/GarethWoodman/bowling-challenge)
