@@ -14,3 +14,7 @@ A collection of projects worked on as outlined by the Makers course. Please navi
 * [Rock, Paper, Scissors Challenge](https://github.com/GarethWoodman/rps-challenge)
 * [Chitter Challenge](https://github.com/GarethWoodman/chitter-challenge)
 * [Bowling Challenge](https://github.com/GarethWoodman/bowling-challenge)
+
+## Personal Projects
+* [Etch-A-Sketch](https://github.com/GarethWoodman/ETCH-A-SKETCH)
+* [Battleships - Terminal](https://github.com/GarethWoodman/battleships_tech_test)
