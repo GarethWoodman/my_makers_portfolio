@@ -1,6 +1,8 @@
 # Welcome to My Portfolio
 A collection of projects worked on as outlined by the Makers course. Please navigate via the weekly directories to view my journey or see my highlights below. 
 
+# Website: https://garethwoodman.github.io/
+
 # Highlights!
 
 ## Group Projects
